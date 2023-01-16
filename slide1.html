@@ -1,0 +1,38 @@
+<div class="carousel-item">
+    <div class="row">
+        <div class="col">slide 1</div>
+        <div class="col">slide 2</div>
+        <div class="col">slide 3</div>
+        <div class="col">slide 4</div>
+    </div>
+</div>
+<div class="carousel-item">
+    <div class="row">
+        <div class="col">slide 5</div>
+        <div class="col">slide 6</div>
+        <div class="col">slide 7</div>
+        <div class="col">slide 8</div>
+    </div>
+</div>
+
+<script>
+    (function ($) {
+        "use strict";
+
+        $('.carousel .carousel-item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            if (next.next().length > 0) {
+                next.next().children(':first-child').clone().appendTo($(this));
+            }
+            else {
+                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            }
+        });
+
+    })(jQuery); 
+</script>

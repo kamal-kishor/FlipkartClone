@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--auto compiled css & Js-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- JavaScript for adding
+	slider for multiple images
+	shown at once-->
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".carousel .item").each(function () {
+                var i = $(this).next();
+                i.length || (i = $(this).siblings(":first")),
+                    i.children(":first-child").clone().appendTo($(this));
+
+                for (var n = 0; n < 4; n++)(i = i.next()).length ||
+                    (i = $(this).siblings(":first")),
+                    i.children(":first-child").clone().appendTo($(this))
+            })
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- container class for bootstrap card-->
+    <div class="container">
+        <!-- bootstrap card with row name myCarousel as row 1-->
+        <div class="carousel slide" id="myCarousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="col-xs-2">
+                        <a href="#">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190709143904/391.png"
+                                class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-xs-2">
+                        <a href="#">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190709143850/1382.png"
+                                class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-xs-2">
+                        <a href="#">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190709143855/223-1.png"
+                                class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div> <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <i class="glyphicon glyphicon-chevron-left">
+                </i>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <i class="glyphicon glyphicon-chevron-right">
+                </i>
+            </a>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-8 col-sm-8">
+    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="item active">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/l4n2oi80/bottle/a/e/i/-original-imagfhvgufgtgzzj.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/ka492fk0/lunch-box/v/g/y/set-of-3-klip-n-store-microwavable-containers-with-lunch-bag-original-imafrrbpkgyfzxmx.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kwb07m80/physical-game/t/e/p/yes-standard-edition-ps5-gran-turismo-7-standard-ed-full-game-original-imag9yd5uzdbqp5c.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kg9qbgw0/bottle/f/w/4/1000-flip-style-ss-bot-flipstyle-1000ml-cello-original-imafwgwf7frgkynb.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/l4zxn680/sticker/n/7/7/extra-large-wall-sticker-bird-paradise-500-hy9460-xl-flipkart-original-imagfrufswnggtgt.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/l4zxn680/sticker/n/7/7/extra-large-wall-sticker-bird-paradise-500-hy9460-xl-flipkart-original-imagfrufswnggtgt.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kjuby4w0/mat/0/7/4/medium-grass-09-flipkart-smartbuy-original-imafzbgygmmyr9q6.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="col-md-4 col-sm-4">
+                    <div class="caruouseImage">
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kge0n0w0/role-play-toy/y/s/s/pranab-kitchen-setfor-kids-kirat-original-imafwmvfqyff56s5.jpeg?q=70"
+                                class="img-responsive" style="width: 100%;">
+                        </a>
+                        <div class="caruouselItem" style="display: flex; flex-direction:column;">
+                            <h5> <b>Water Bottles</b></h5>
+                            <h5 style="color: green;"> From ₹119</h5>
+                            <h5 style="color: gray;">Kamal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

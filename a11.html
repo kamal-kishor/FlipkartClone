@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        How to dynamically create
+        new elements in JavaScript?
+    </title>
+
+    <style>
+        body,
+        header {
+            text-align: center;
+            font-family: arial;
+            font-size: 1em;
+            background-color: silver;
+        }
+
+        .frame {
+            padding: 25px;
+            background-color: white;
+            border: solid 1px black;
+            display: inline-block;
+        }
+
+        #prompt {
+            background-color: aqua;
+            padding: 10px;
+            display: none;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        .opClass {
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+            /* For IE8 and earlier */
+            cursor: default;
+        }
+    </style>
+    <script>
+        var currentId = "";
+        var x = 0;
+        var y = 0;
+        var personArray = [
+            { firstname: "Ann", url: "http://www.tuktukdesign.com/wp-content/uploads/2017/12/person-icon.jpg" },
+            { firstname: "Jane", url: "http://www.tuktukdesign.com/wp-content/uploads/2017/12/person-icon.jpg" },
+            { firstname: "John", url: "http://www.tuktukdesign.com/wp-content/uploads/2017/12/person-icon.jpg" },
+            { firstname: "Joe", url: "http://www.tuktukdesign.com/wp-content/uploads/2017/12/person-icon.jpg" }];
+
+        function populateImages() {
+            for (var i = 0; i < personArray.length; i++) {
+                
+                var newDiv = document.createElement('img');
+                newDiv.setAttribute('class', 'frame');
+                newDiv.setAttribute('src', personArray[i].url);
+                newDiv.setAttribute('onclick', 'promptForName(this)');
+                newDiv.setAttribute('onmouseover', 'styleIt(this)');
+                newDiv.setAttribute('onmouseout', 'unStyleIt(this)');
+                newDiv.setAttribute('id', '1');
+                document.getElementById('pic-grid').appendChild(newDiv);
+            }
+        }
+
+        function promptForName(element) {
+            document.getElementById('response').value = "";
+            document.getElementById('message').innerHTML = "";
+            document.getElementById('prompt').style.display = 'block';
+            currentId = element.id;
+            x = element.offsetLeft;
+            y = element.offsetTop;
+            x = x + 20;
+            y = y + 20;
+            document.getElementById('prompt').style.position = "absolute";
+            document.getElementById('prompt').style.top = y;
+            document.getElementById('prompt').style.left = x;
+            document.getElementById('response').focus();
+        }
+
+        function styleIt(element) {
+            element.parentNode.style.backgroundColor = 'aqua';
+        }
+
+        function unStyleIt(element) {
+            element.parentNode.style.backgroundColor = 'white';
+        }
+
+        function checkAnswer() {
+            if (document.getElementById('response').value == personArray[currentId].firstname) {
+
+                document.getElementById(currentId).className = "opClass";
+                document.getElementById(currentId).removeAttribute("onclick");
+                document.getElementById(currentId).removeAttribute("onmouseover");
+
+                var divVar = document.createElement('div');
+                divVar.setAttribute('id', currentId + 'name');
+                document.getElementById('pic-grid').appendChild(divVar);
+                var textNode = document.createTextNode(personArray[currentId].firstname);
+                divVar.appendChild(textNode);
+                document.getElementById(currentId + 'name').style.position = "absolute";
+                document.getElementById(currentId + 'name').style.top = y;
+                document.getElementById(currentId + 'name').style.left = x;
+
+                document.getElementById('prompt').style.display = 'none';
+                document.getElementById(currentId).parentNode.style.backgroundColor = 'white';
+                document.getElementById('response').value = "";
+                document.getElementById('message').innerHTML = "";
+            } else {
+                if (document.getElementById('message').innerHTML == "Wrong!") {
+                    document.getElementById('message').innerHTML = "Incorrect answer!"
+                } else {
+                    document.getElementById('message').innerHTML = "Wrong!"
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body onload="populateImages()">
+    <header>
+        <h2>Class Flashcards</h2>
+        <h3>Click on a student to guess their name</h3>
+    </header>
+
+    <div id="pic-grid">
+    </div>
+
+    <div id="prompt">
+        What is this student's name?<br />
+        <form onsubmit="return checkAnswer()">
+            <input type="text" id="response" name="quizInput">
+        </form>
+        <div id="message"></div>
+    </div>
+</body>
+
+</html>

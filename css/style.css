@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(400deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.wrapper {
+    font-family: Roboto, Arial, sans-serif;
+    letter-spacing: 0;
+    background-color: #f1f1f1;
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #2874f0 !important;
+}
+
+img {
+    width: 90px;
+}
+
+input,
+select,
+textarea {
+    line-height: 35px !important;
+    width: 100% !important;
+    border-radius: 2px !important;
+    border: 2px !important;
+}
+
+.dropdown {
+    align-items: flex-end;
+    width: 80%;
+    padding-left: 15px;
+}
+
+.bton {
+    border: none;
+    border-radius: 2px;
+    padding: 0px !important;
+    width: 80% !important;
+    margin-top: 2px !important;
+    line-height: 30px !important;
+    color: #2874f0 !important;
+    background-color: white !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+}
+
+.dropdown-menu>li>.signup {
+    color: #2874f0 !important;
+    font-weight: 600 !important;
+}
+
+.btn-signup {
+    width: 30% !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px;
+    background-color: #8bc34a !important;
+}
+
+.modal-footer {
+    text-align: center !important;
+}
+
+.dropdown-menu {
+    margin-top: 10px !important;
+    left: -45px !important;
+    min-width: 240px !important;
+}
+
+.dropdown ul::before {
+    content: "";
+    position: absolute;
+    right: 130px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #fae0bb transparent;
+    z-index: 9999
+}
+
+.dropdown-menu>li>a {
+    text-decoration: none;
+    font-size: 14px;
+    text-align: right;
+    clear: both;
+    font-weight: 400 !important;
+    line-height: 1.42857143;
+    color: black !important;
+    white-space: nowrap;
+    display: inline-block !important;
+}
+
+.dropdown-header {
+    font-size: 15px !important;
+    font-weight: 600;
+
+}
+
+.becomeSeller {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+
+a {
+    padding-top: 7px !important;
+}
+
+.col-md-2,
+.col-sm-2 {
+    padding: 0px !important;
+}
+
+.jumbotron {
+    padding: 10px 0px !important;
+    margin: 0px !important;
+    color: black !important;
+    background-color: white !important;
+}
+
+.jubo_container img {
+    width: 80% !important;
+}
+
+.jumbo_container {
+    position: fixed;
+    width: 100%;
+    padding: 0px 35px;
+    margin: 0;
+}
+
+.jumbo_row_div {
+    margin: 0 16px;
+    text-align: center;
+    padding: 0 !important;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.drp_row_div {
+    padding: 14px 0;
+    text-align: left;
+}
+
+.drp_row_div a {
+    font-size: 14px;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none !important;
+    display: block;
+}
+
+.drp_row_div:nth-child(even) {
+    background-color: gainsboro;
+}
+
+.drp_row_div:nth-child(odd) {
+    background-color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    left: 50% !important;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.jumbo_container {
+    left: 40px !important;
+}
+
+.carousel {
+    padding: 10px 8px;
+}
+
+.carousel-control {
+    width: 4% !important;
+    height: 110px;
+    color: black !important;
+    background-color: white !important;
+    margin-top: 70px;
+    text-shadow: none !important;
+    border-radius: 5px !important;
+    opacity: 1 !important;
+}
+
+.carousel-control.left {
+    background-image: none !important;
+    left: 8px !important;
+}
+
+.glyphicon-chevron-left {
+    left: 25px !important;
+}
+
+.carousel-control.right {
+    background-image: none !important;
+    right: 0px !important;
+}
+
+.glyphicon-chevron-risht {
+    right: 10px;
+}
+
+.pageContent {
+    padding: 1px 8px;
+    background-color: #f1f3f6;
+    width: 100%;
+}
+
+.gridContent {
+    margin: 10px 17px;
+    display: block;
+    background-color: white;
+    padding: 0px 0px 10px 0px;
+}
+
+.row {
+    padding: 0% !important;
+    margin: 0 !important;
+}
+
+.left_offer {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.btn-offer {
+    background-color: #2874f0;
+    color: white;
+}
+
+.scroll_offer {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 8%);
+    overflow: hidden;
+}
+
+.caruouseImage {
+    text-align: center;
+}
+
+.img-responsive {
+    height: 250px;
+}
+
+
+/* .caruouselItem {
+    text-align: center;
+    padding-top: 25px;
+} */
+
+.content {
+    padding-top: 20px;
+}
+
+.output_data {
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(194, 171, 194);
+    color: black;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    * {
+        padding: 0px;
+        margin: 0;
+    }
+
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #2874f0 !important;
+    }
+
+    img {
+        width: 70px;
+        padding: 0;
+        margin: 0;
+    }
+
+    input,
+    select,
+    textarea {
+        /* display: none; */
+        margin-left: 70px !important;
+        padding-left: 5px;
+        margin-left: 5px !important;
+        line-height: 25px !important;
+    }
+
+    .dropdown {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .becomeSeller {
+        display: none;
+    }
+
+    .bton {
+        margin-left: 0px;
+        line-height: 25px !important;
+    }
+
+    .jumbotron {
+        padding: 5px 0px !important;
+    }
+
+    .jumbo_row_div {
+        margin: 0 4px;
+        font-size: 3px;
+    }
+
+    .carousel {
+        padding: 3px;
+    }
+
+    .pageContent {
+        padding: 2px;
+    }
+
+    .carousel-control {
+        margin-top: 12px;
+        height: 30px;
+        font-size: 10px !important;
+    }
+
+    .glyphicon-chevron-left {
+        left: 12px !important;
+        top: 20px !important;
+    }
+
+    .glyphicon-chevron-right {
+        right: 10px !important;
+        top: 20px !important;
+    }
+
+    .gridContent {
+        margin-bottom: 0 !important;
+        padding: 4px 0px !important;
+    }
+
+    .left_offer {
+        padding-top: 0px;
+    }
+
+    .h3,
+    h3 {
+        font-size: 10px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .btn {
+        padding: 2px 4px !important;
+        font-size: 4px !important;
+    }
+
+    a {
+        padding-top: 0px !important;
+    }
+
+    .h5,
+    h5 {
+        font-size: 5px !important;
+        margin: 0 !important;
+        padding: 0px !important;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+    input,
+    select,
+    textarea {
+        margin-left: 40px !important;
+        line-height: 30px !important;
+    }
+
+    .dropdown,
+    .dropup {
+        margin-left: 26px !important;
+        line-height: 30px !important;
+    }
+
+    .bton {
+        margin-top: 0px !important;
+        margin-left: 25px;
+    }
+
+    .becomeSeller {
+        margin: 0 !important;
+        padding-left: 17px;
+    }
+
+    i.fa.fa-shopping-cart {
+        font-size: 14px !important;
+    }
+
+    .jumbo_row_div {
+        margin: 0 10px;
+        font-size: 3px;
+        align-items: center !important;
+    }
+
+    .dropdown,
+    .dropup {
+        margin-left: 0px !important;
+        line-height: 3px !important;
+        font-size: 4px !important;
+    }
+
+    .jumbotron .container {
+        left: 0 !important;
+    }
+
+    .carousel-control {
+        height: 50px;
+        margin-top: 50px;
+    }
+
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .icon-prev {
+        margin-left: -25px !important;
+        font-size: 25px !important;
+    }
+
+    .left_offer {
+        padding-top: 45px;
+    }
+
+    .h3,
+    h3 {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 10px !important;
+    }
+
+    .h5, h5 {
+        font-size: 12px !important;
+    }
+
+    b,
+    strong {
+        font-weight: 550;
+    }
+    
+}
